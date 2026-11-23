@@ -10,7 +10,7 @@ const catalogue=[
  ["Wikipédia","Encyclopédie généraliste · exports Wikimedia","https://wikitech.wikimedia.org/wiki/MediaWiki_Content_File_Exports"],
 ];
 export function Catalogue(){
- return <details className="panel supplemental"><summary>Catalogues documentaires à consulter</summary><p>Pour enrichir le corpus UAZ, vérifiez la provenance, la version et les droits d’indexation de chaque texte intégral avant import.</p><ul>{catalogue.map(([nom,type,url])=><li key={nom}><a href={url} target="_blank" rel="noreferrer">{nom}</a> · {type}</li>)}</ul><p>Les analyses comparent les références importées et les devoirs autorisés du corpus interne.</p></details>;
+ return <details className="panel supplemental"><summary>Catalogues documentaires à consulter</summary><p>Pour enrichir votre corpus, vérifiez la provenance, la version et les droits d’indexation de chaque texte intégral avant import.</p><ul>{catalogue.map(([nom,type,url])=><li key={nom}><a href={url} target="_blank" rel="noreferrer">{nom}</a> · {type}</li>)}</ul><p>Les analyses comparent les références importées et les devoirs autorisés du corpus interne.</p></details>;
 }
 export function Tableau({espace}:any){
  const own=espace.devoirs||[], review=espace.revue||[];
